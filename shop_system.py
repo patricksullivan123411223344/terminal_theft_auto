@@ -3,19 +3,30 @@ from player import player
 import time
 import sys
 
-print("This is the shop!")
-time.sleep(3)
-print("To continue shopping, type SHOP")
-time.sleep(3)
-print("To see our stock, type STOCK")
-time.sleep(3)
-player_input = input("Whats your move?: ")
+def terminalPrintAnimation(text):
+    for character in text:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.05)
+    print()
 
-if player_input == "":
+terminalPrintAnimation("Welcome to the shop!")
+time.sleep(1)
+terminalPrintAnimation("To continue shopping, type SHOP")
+time.sleep(1)
+terminalPrintAnimation("To see our stock, type STOCK")
+time.sleep(1)
+player_choice = input("SHOP/STOCK: ")
+
+if player_choice == "":
     raise ValueError("The player should answer with either SHOP or STOCK...")
     sys.exit()
 
-if player_input == "STOCK":
-    print("Heres what we have:")
-    print(f"{guns[0:3+1]}")
-    print(f"{melee[0:3+1]}")
+if player_choice == "STOCK":
+    terminalPrintAnimation("Heres what we have:")
+    print(guns)
+    time.sleep(0.5)
+    print(melee)
+
+
+
