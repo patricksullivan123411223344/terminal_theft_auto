@@ -1,4 +1,5 @@
 import math
+from player import player
 
 class Weapons():
     def __init__(self, name, value=None, legendary = None):

@@ -1,5 +1,6 @@
 import time
 import math
+from weapons import guns, melee
 
 class Player():
     def __init__(self, health, weapon, tot_currency=None, inventory=None):
@@ -8,7 +9,7 @@ class Player():
         self.inventory = inventory if inventory is not None else []
         self.weapon = weapon
 
-player = Player(100, math.inf)
+player = Player(math.inf, guns[0], math.inf)
 
 def legendary_item_found():
     if player.weapon == True:
@@ -16,3 +17,5 @@ def legendary_item_found():
           time.sleep(3), "....",
           time.sleep(5), "......",
           time.sleep(8), "{player.inventory}")
+        
+print(legendary_item_found(player))
