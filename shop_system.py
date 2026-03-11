@@ -1,4 +1,4 @@
-from arsenal import guns, melee
+from items import guns, melee
 from player import player
 import time
 import sys

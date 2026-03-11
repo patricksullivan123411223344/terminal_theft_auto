@@ -1,6 +1,6 @@
 import time
 import math
-from arsenal import guns
+from items import guns
 
 class Player():
     def __init__(self, health, weapon, tot_currency=None, inventory=None):
