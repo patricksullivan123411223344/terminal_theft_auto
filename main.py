@@ -7,4 +7,4 @@ We import functions relative to where the user chooses to go from scenes.py
 
 """
 
-from player import player 
+
