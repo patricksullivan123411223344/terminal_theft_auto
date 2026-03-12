@@ -58,7 +58,7 @@ terminalPrintAnimation("To continue shopping, type SHOP")
 time.sleep(1)
 terminalPrintAnimation("To see our stock, type STOCK")
 time.sleep(1)
-player_choice = input("SHOP/STOCK: ")
+player_choice = input("What would you like to do?: ")
 
 if player_choice == "":
     raise ValueError("The player should answer with either SHOP or STOCK...")
