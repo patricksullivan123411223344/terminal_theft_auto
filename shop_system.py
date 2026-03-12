@@ -1,5 +1,6 @@
 from items import guns, melee, food_healables, syringe_healables
 from player import player
+from npc import StoreClerk
 import time
 import sys
 
@@ -51,7 +52,7 @@ def shoppingLogic():
     
     return selected_items[itemIndex]
 
-terminalPrintAnimation("Welcome to the shop!")
+terminalPrintAnimation(str("Welcome to the shop!"))
 time.sleep(1)
 terminalPrintAnimation("To continue shopping, type SHOP")
 time.sleep(1)
@@ -86,7 +87,7 @@ if player_choice == "Y":
         player.inventory.append(chosenItem)
         terminalPrintAnimation(f"{chosenItem.name} has been added to your inventory. Congrats... I think?")
 elif player_choice == "N":
-    print("See you next time, broke boy...")
+    terminalPrintAnimation("See you next time, broke boy...")
     sys.exit()
 
 terminalPrintAnimation(str(player.inventory))
